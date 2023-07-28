@@ -1,0 +1,120 @@
+.header {
+    position: sticky;
+    width: 100%;
+    padding: 16px 0;
+    background-color: #000;
+    z-index: 999;
+}
+
+.header nav {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.header nav .menus {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.header nav .menus li a {
+    display: block;
+    position: relative;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.6);
+}
+.header nav .menus li a:hover,
+.header nav .menus li a.active {
+    color: #fff;
+}
+
+.header nav .menus li a.active::before {
+    content: "";
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 22px;
+    background: url("/public/assets/images/active-menu.png") center no-repeat;
+    background-size: cover;
+}
+
+.header nav .optionList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.header nav .optionList .iconButton {
+    position: relative;
+    background: none !important;
+    border: none;
+    outline: none;
+    color: #fff;
+}
+
+.header nav .optionList .iconButton.logout {
+    color: #f00;
+}
+
+.respTOggler,
+.menuCloser {
+    display: none;
+}
+
+
+@media (max-width: 992px) {
+    .respTOggler {
+        display: block;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .menuCloser {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        color: #fff;
+        cursor: pointer;
+    }
+
+    .header nav .menus {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        position: fixed;
+        left: -100%;
+        top: 0;
+        width: 280px;
+        height: 100%;
+        padding: 50px 0;
+        background-color: #000;
+        box-shadow: 0 10px 10px rgba(0, 0, 0, .1);
+        z-index: 9;
+        transition: all .5s;
+    }
+
+    .header nav .menus.active {
+        left: 0;
+    }
+
+    .header nav .menus li a {
+        padding: 12px 24px;
+    }
+
+    .header nav .menus li a.active::before {
+        left: 8px;
+    }
+}
