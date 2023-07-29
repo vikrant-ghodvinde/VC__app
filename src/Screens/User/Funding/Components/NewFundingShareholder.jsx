@@ -7,7 +7,7 @@ const NewFundingShareholder = () => {
   const [pageType, setPageType] = useState("setUp");
   return (
     <>
-      <StatusBar title="Previous Funding Round" link="/funding" />
+      <StatusBar title="Previous Funding Round" linkBack="/funding" />
       <div className="page__wrapper">
         <Container fluid className="px-5">
           <div className="d-flex gap-4 align-items-center mb-5">

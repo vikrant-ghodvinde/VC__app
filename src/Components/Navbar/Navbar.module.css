@@ -5,7 +5,9 @@
     background-color: #000;
     z-index: 999;
 }
-
+.hide{
+    display: none;
+}
 .header nav {
     position: relative;
     width: 100%;

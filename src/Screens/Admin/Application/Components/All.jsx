@@ -1,8 +1,10 @@
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 import React from "react";
 import { Table } from "react-bootstrap";
+import { useNavigate } from "react-router-dom";
 
 const All = () => {
+  const navigate = useNavigate()
   return (
     <>
       <Table responsive className="fs-sm">
@@ -18,7 +20,7 @@ const All = () => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr style={{cursor:"pointer"}} onClick={() => navigate('/admin-company')}>
             <td>
               <div>ASG</div>
               <div className="text-grey fs-xs">olivia@untitledui.com</div>
@@ -44,7 +46,7 @@ const All = () => {
               <button className="table__btn-apply">Apply</button>
             </td>
           </tr>
-          <tr>
+          <tr tyle={{cursor:"pointer"}} onClick={() => navigate('/admin-company')}>
             <td>
               <div>ASG</div>
               <div className="text-grey fs-xs">olivia@untitledui.com</div>
@@ -70,7 +72,7 @@ const All = () => {
               <button className="table__btn-apply">Apply</button>
             </td>
           </tr>
-          <tr>
+          <tr tyle={{cursor:"pointer"}} onClick={() => navigate('/admin-company')}>
             <td>
               <div>ASG</div>
               <div className="text-grey fs-xs">olivia@untitledui.com</div>
@@ -96,7 +98,7 @@ const All = () => {
               <button className="table__btn-apply">Apply</button>
             </td>
           </tr>
-          <tr>
+          <tr tyle={{cursor:"pointer"}} onClick={() => navigate('/admin-company')}>
             <td>
               <div>ASG</div>
               <div className="text-grey fs-xs">olivia@untitledui.com</div>
@@ -122,7 +124,7 @@ const All = () => {
               <button className="table__btn-apply">Apply</button>
             </td>
           </tr>
-          <tr>
+          <tr tyle={{cursor:"pointer"}} onClick={() => navigate('/admin-company')}>
             <td>
               <div>ASG</div>
               <div className="text-grey fs-xs">olivia@untitledui.com</div>
@@ -148,7 +150,7 @@ const All = () => {
               <button className="table__btn-apply">Apply</button>
             </td>
           </tr>
-          <tr>
+          <tr tyle={{cursor:"pointer"}} onClick={() => navigate('/admin-company')}>
             <td>
               <div>ASG</div>
               <div className="text-grey fs-xs">olivia@untitledui.com</div>
@@ -174,7 +176,7 @@ const All = () => {
               <button className="table__btn-apply">Apply</button>
             </td>
           </tr>
-          <tr>
+          <tr tyle={{cursor:"pointer"}} onClick={() => navigate('/admin-company')}>
             <td>
               <div>ASG</div>
               <div className="text-grey fs-xs">olivia@untitledui.com</div>
@@ -200,7 +202,7 @@ const All = () => {
               <button className="table__btn-apply">Apply</button>
             </td>
           </tr>
-          <tr>
+          <tr tyle={{cursor:"pointer"}} onClick={() => navigate('/admin-company')}>
             <td>
               <div>ASG</div>
               <div className="text-grey fs-xs">olivia@untitledui.com</div>

@@ -11,16 +11,16 @@ const Dashboard = () => {
       <Container fluid className="px-5">
         <div className="page-title">Company Information</div>
         <div className="d-flex align-items-center justify-content-end">
-          <button className="btn p-2 border-0" onClick={()=> setPageType("edit")}>
+          <button className="btn p-2 border-0" onClick={() => setPageType("edit")}>
             <FeatherIcon icon="edit" size={18} />
           </button>
-          <button className="btn p-2 border-0" onClick={()=> setPageType("saved")}>
+          <button className="btn p-2 border-0" onClick={() => setPageType("saved")}>
             <FeatherIcon icon="save" size={18} />
           </button>
         </div>
         <div className="page-content">
           <div className="">Customer Number 123455</div>
-          {pageType === "edit" && <EditDetails />  }
+          {pageType === "edit" && <EditDetails pagetype={pageType} />  }
           {pageType === "saved" && <SavedDetails />  }
         </div>
       </Container>

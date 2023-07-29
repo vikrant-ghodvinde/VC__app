@@ -1,44 +1,43 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
-import InvertorsNewFunding from "../Screens/InvestorsNewFunding";
-import InvertorsDocuments from "../Screens/InvestorsDocuments";
-import InvertorsSummery from "../Screens/InvestorsSummery";
 import StatusBar from "Components/StatusBar/StatusBar";
+import { Link, Outlet, useLocation } from "react-router-dom";
 
 const InvertorsFunding = () => {
-  const [pageType, setPageType] = useState("newFunding");
+  const location = useLocation();
+  console.log(location.pathname)
   return (
     <>
-      <StatusBar title="New Round" link="/investor-list" />
+      {
+        location.pathname === "/investor-list/invertor-funding" && <StatusBar linkBack='/investor-list' linkNext="/investor-list/invertor-funding/document" />
+      }
+      {
+        location.pathname === "/investor-list/invertor-funding/document" && <StatusBar linkBack='/investor-list/invertor-funding' linkNext="/investor-list/invertor-funding/summary" />
+      }
+      {
+        location.pathname === "/investor-list/invertor-funding/summary" && <StatusBar linkBack='/investor-list/invertor-funding/document'  />
+      }
       <div className="page__wrapper">
         <Container fluid className="px-5">
           <div className="d-flex gap-4 align-items-center mb-5">
-            <div
-              className={`${pageType === "newFunding" && "page-title"} mb-0`}
-              style={{ cursor: "pointer" }}
-              onClick={() => setPageType("newFunding")}
+            <Link to="/investor-list/invertor-funding" style={{ cursor: "pointer" }} 
+            className={`${location.pathname === "/investor-list/invertor-funding" && "page-title"} mb-0 text-dark`}
             >
               New Funding
-            </div>
-            <div
-              className={`${pageType === "documents" && "page-title"} mb-0`}
-              style={{ cursor: "pointer" }}
-              onClick={() => setPageType("documents")}
+            </Link>
+            <Link to="/investor-list/invertor-funding/document" style={{ cursor: "pointer" }}
+            className={`${location.pathname === "/investor-list/invertor-funding/document" && "page-title"} mb-0 text-dark`}
             >
               Documents
-            </div>
-            <div
-              className={`${pageType === "summary" && "page-title"} mb-0`}
-              style={{ cursor: "pointer" }}
-              onClick={() => setPageType("summary")}
+            </Link>
+            <Link to="/investor-list/invertor-funding/summary" style={{ cursor: "pointer" }}
+            className={`${location.pathname === "/investor-list/invertor-funding/summary" && "page-title"} mb-0 text-dark`}
             >
               Summary
-            </div>
+            </Link>
           </div>
           <div className="page-content">
-            {pageType === "newFunding" && <InvertorsNewFunding />}
-            {pageType === "documents" && <InvertorsDocuments />}
-            {pageType === "summary" && <InvertorsSummery />}
+            <Outlet />
           </div>
         </Container>
       </div>

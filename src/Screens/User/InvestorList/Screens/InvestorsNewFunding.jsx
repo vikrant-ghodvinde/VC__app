@@ -7,7 +7,7 @@ import formStyle from "Styles/FormControl.module.css";
 const InvertorsNewFunding = () => {
   return (
     <>
-    <StatusBar title="hello" />
+    {/* <StatusBar title="hello" linkBack='/investor-list/invertor-funding' /> */}
       <Container fluid className="px-5">
         <div className="d-flex align-items-center justify-content-end mb-5">
           <button className="btn p-2 border-0">

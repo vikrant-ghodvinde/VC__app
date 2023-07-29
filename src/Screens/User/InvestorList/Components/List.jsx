@@ -3,6 +3,7 @@ import styles from "Styles/Style.module.css";
 import { Col, Form, Row, Table } from "react-bootstrap";
 import Paginations from "Components/Pagination/Paginations";
 import formStyle from "Styles/FormControl.module.css";
+import { Link } from "react-router-dom";
 
 const List = () => {
   return (
@@ -88,7 +89,7 @@ const List = () => {
               <Form.Check type="switch" id="" className="float-end" />
             </td>
             <td>
-              <button className="table__btn-apply">Apply</button>
+              <Link to='/investor-list/invertor-funding' className="table__btn-apply">Apply</Link>
             </td>
           </tr>
           <tr>
@@ -121,7 +122,7 @@ const List = () => {
               <Form.Check type="switch" id="" className="float-end" />
             </td>
             <td>
-              <button className="table__btn-apply">Apply</button>
+              <Link to='/apply-investor' className="table__btn-apply">Apply</Link>
             </td>
           </tr>
           <tr>
@@ -154,7 +155,7 @@ const List = () => {
               <Form.Check type="switch" id="" className="float-end" />
             </td>
             <td>
-              <button className="table__btn-apply">Apply</button>
+              <Link to='/apply-investor' className="table__btn-apply">Apply</Link>
             </td>
           </tr>
           <tr>
@@ -187,7 +188,7 @@ const List = () => {
               <Form.Check type="switch" id="" className="float-end" />
             </td>
             <td>
-              <button className="table__btn-apply">Apply</button>
+              <Link to='/apply-investor' className="table__btn-apply">Apply</Link>
             </td>
           </tr>
           <tr>
@@ -220,7 +221,7 @@ const List = () => {
               <Form.Check type="switch" id="" className="float-end" />
             </td>
             <td>
-              <button className="table__btn-apply">Apply</button>
+              <Link to='/apply-investor' className="table__btn-apply">Apply</Link>
             </td>
           </tr>
           <tr>
@@ -253,7 +254,7 @@ const List = () => {
               <Form.Check type="switch" id="" className="float-end" />
             </td>
             <td>
-              <button className="table__btn-apply">Apply</button>
+              <Link to='/apply-investor' className="table__btn-apply">Apply</Link>
             </td>
           </tr>
           <tr>
@@ -286,7 +287,7 @@ const List = () => {
               <Form.Check type="switch" id="" className="float-end" />
             </td>
             <td>
-              <button className="table__btn-apply">Apply</button>
+              <Link to='/apply-investor' className="table__btn-apply">Apply</Link>
             </td>
           </tr>
         </tbody>

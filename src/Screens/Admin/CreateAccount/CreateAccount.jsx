@@ -82,9 +82,9 @@ const CreateAccount = () => {
           <Link to="/" className="btn">
             LOGIN
           </Link>
-          <button type="button" className="btn btn-glow">
+          <Link to='/admin-fundtype' type="button" className="btn btn-glow">
             NEXT
-          </button>
+          </Link>
         </div>
       </FlexContainer>
     </div>

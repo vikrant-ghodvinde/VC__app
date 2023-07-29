@@ -15,7 +15,7 @@ const CapTable = () => {
             <Row>
               <Col sm={12} md={9}>
                 <div className="d-flex align-items-center gap-3 flex-wrap">
-                  <button className="btn btn-dark fs-sm px-3 py-2">Add</button>
+                  <Link to='/cap-table/new-shareholder' className="btn btn-dark fs-sm px-3 py-2">Add</Link>
                   <button className="btn fs-sm px-3 py-2">Download</button>
                 </div>
               </Col>
@@ -56,7 +56,7 @@ const CapTable = () => {
                   <span className="text-grey">ABCD</span>
                 </td>
                 <td className="text-center">
-                  <Link to="" className="text-purple">
+                  <Link to="/cap-table/edit-shareholder" className="text-purple">
                     Edit
                   </Link>
                 </td>
@@ -82,7 +82,7 @@ const CapTable = () => {
                   <span className="text-grey">ABCD</span>
                 </td>
                 <td className="text-center">
-                  <Link to="" className="text-purple">
+                  <Link to="/cap-table/edit-shareholder" className="text-purple">
                     Edit
                   </Link>
                 </td>
@@ -108,7 +108,7 @@ const CapTable = () => {
                   <span className="text-grey">ABCD</span>
                 </td>
                 <td className="text-center">
-                  <Link to="" className="text-purple">
+                  <Link to="/cap-table/edit-shareholder" className="text-purple">
                     Edit
                   </Link>
                 </td>
@@ -134,7 +134,7 @@ const CapTable = () => {
                   <span className="text-grey">ABCD</span>
                 </td>
                 <td className="text-center">
-                  <Link to="" className="text-purple">
+                  <Link to="/cap-table/edit-shareholder" className="text-purple">
                     Edit
                   </Link>
                 </td>
@@ -160,7 +160,7 @@ const CapTable = () => {
                   <span className="text-grey">ABCD</span>
                 </td>
                 <td className="text-center">
-                  <Link to="" className="text-purple">
+                  <Link to="/cap-table/edit-shareholder" className="text-purple">
                     Edit
                   </Link>
                 </td>
@@ -186,7 +186,7 @@ const CapTable = () => {
                   <span className="text-grey">ABCD</span>
                 </td>
                 <td className="text-center">
-                  <Link to="" className="text-purple">
+                  <Link to="/cap-table/edit-shareholder" className="text-purple">
                     Edit
                   </Link>
                 </td>
@@ -212,7 +212,7 @@ const CapTable = () => {
                   <span className="text-grey">ABCD</span>
                 </td>
                 <td className="text-center">
-                  <Link to="" className="text-purple">
+                  <Link to="/cap-table/edit-shareholder" className="text-purple">
                     Edit
                   </Link>
                 </td>

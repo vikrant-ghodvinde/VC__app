@@ -1,8 +1,10 @@
+import MessageModal from "Components/MessageModal/MessageModal";
 import Paginations from "Components/Pagination/Paginations";
-import React from "react";
+import React, { useState } from "react";
 import { Table } from "react-bootstrap";
 
 const ApplicationTable = () => {
+    const [show, setShow] = useState(false)
   return (
     <>
       <Table responsive className="fs-sm">
@@ -20,7 +22,7 @@ const ApplicationTable = () => {
         <tbody className="text-center">
             <tr>
                 <td>
-                    <div className="table__has-image">
+                    <div className="table__has-image" style={{cursor:"pointer"}} onClick={() => setShow(true)}>
                         <img src="https://www.pngkit.com/png/detail/256-2564543_beautiful-website-and-internet-marketing-that-boosts-girl.png" alt="" />
                         <span className="text-decoration-underline">Olivia Rhye</span>
                     </div>
@@ -30,11 +32,11 @@ const ApplicationTable = () => {
                 <td>Pending</td>
                 <td><span className="dark-badge">Started</span></td>
                 <td>11/12/2020</td>
-                <td><button className="table__btn-cancel">Cancel</button></td>
+                <td><button className="table__btn-cancel" onClick={() => setShow(true)}>Cancel</button></td>
             </tr>
             <tr>
                 <td>
-                    <div className="table__has-image">
+                    <div className="table__has-image" style={{cursor:"pointer"}} onClick={() => setShow(true)}>
                         <img src="https://www.pngkit.com/png/detail/256-2564543_beautiful-website-and-internet-marketing-that-boosts-girl.png" alt="" />
                         <span className="text-decoration-underline">Name</span>
                     </div>
@@ -44,11 +46,11 @@ const ApplicationTable = () => {
                 <td>Pending</td>
                 <td><span className="dark-badge">Started</span></td>
                 <td>11/12/2020</td>
-                <td><button className="table__btn-cancel">Cancel</button></td>
+                <td><button className="table__btn-cancel" onClick={() => setShow(true)}>Cancel</button></td>
             </tr>
             <tr>
                 <td>
-                    <div className="table__has-image">
+                    <div className="table__has-image" style={{cursor:"pointer"}} onClick={() => setShow(true)}>
                         <img src="https://www.pngkit.com/png/detail/256-2564543_beautiful-website-and-internet-marketing-that-boosts-girl.png" alt="" />
                         <span className="text-decoration-underline">Name</span>
                     </div>
@@ -58,11 +60,11 @@ const ApplicationTable = () => {
                 <td>Pending</td>
                 <td><span className="dark-badge">Applied</span></td>
                 <td>11/12/2020</td>
-                <td><button className="table__btn-cancel">Cancel</button></td>
+                <td><button className="table__btn-cancel" onClick={() => setShow(true)}>Cancel</button></td>
             </tr>
             <tr>
                 <td>
-                    <div className="table__has-image">
+                    <div className="table__has-image" style={{cursor:"pointer"}} onClick={() => setShow(true)}>
                         <img src="https://www.pngkit.com/png/detail/256-2564543_beautiful-website-and-internet-marketing-that-boosts-girl.png" alt="" />
                         <span className="text-decoration-underline">Name</span>
                     </div>
@@ -72,11 +74,11 @@ const ApplicationTable = () => {
                 <td>Pending</td>
                 <td><span className="dark-badge">Applied</span></td>
                 <td>11/12/2020</td>
-                <td><button className="table__btn-cancel">Cancel</button></td>
+                <td><button className="table__btn-cancel" onClick={() => setShow(true)}>Cancel</button></td>
             </tr>
             <tr>
                 <td>
-                    <div className="table__has-image">
+                    <div className="table__has-image" style={{cursor:"pointer"}} onClick={() => setShow(true)}>
                         <img src="https://www.pngkit.com/png/detail/256-2564543_beautiful-website-and-internet-marketing-that-boosts-girl.png" alt="" />
                         <span className="text-decoration-underline">Name</span>
                     </div>
@@ -86,11 +88,11 @@ const ApplicationTable = () => {
                 <td>Pending</td>
                 <td><span className="dark-badge">Applied</span></td>
                 <td>11/12/2020</td>
-                <td><button className="table__btn-cancel">Cancel</button></td>
+                <td><button className="table__btn-cancel" onClick={() => setShow(true)}>Cancel</button></td>
             </tr>
             <tr>
                 <td>
-                    <div className="table__has-image">
+                    <div className="table__has-image" style={{cursor:"pointer"}} onClick={() => setShow(true)}>
                         <img src="https://www.pngkit.com/png/detail/256-2564543_beautiful-website-and-internet-marketing-that-boosts-girl.png" alt="" />
                         <span className="text-decoration-underline">Name</span>
                     </div>
@@ -100,11 +102,11 @@ const ApplicationTable = () => {
                 <td>Pending</td>
                 <td><span className="dark-badge">Applied</span></td>
                 <td>11/12/2020</td>
-                <td><button className="table__btn-cancel">Cancel</button></td>
+                <td><button className="table__btn-cancel" onClick={() => setShow(true)}>Cancel</button></td>
             </tr>
             <tr>
                 <td>
-                    <div className="table__has-image">
+                    <div className="table__has-image" style={{cursor:"pointer"}} onClick={() => setShow(true)}>
                         <img src="https://www.pngkit.com/png/detail/256-2564543_beautiful-website-and-internet-marketing-that-boosts-girl.png" alt="" />
                         <span className="text-decoration-underline">Name</span>
                     </div>
@@ -114,11 +116,12 @@ const ApplicationTable = () => {
                 <td>Pending</td>
                 <td><span className="dark-badge">Unsuccessful</span></td>
                 <td>11/12/2020</td>
-                <td><button className="table__btn-cancel" disabled>Cancel</button></td>
+                <td><button className="table__btn-cancel" disabled onClick={() => setShow(true)}>Cancel</button></td>
             </tr>
         </tbody>
       </Table>
       <Paginations />
+      <MessageModal show={show} setShow={setShow} />
     </>
   );
 };

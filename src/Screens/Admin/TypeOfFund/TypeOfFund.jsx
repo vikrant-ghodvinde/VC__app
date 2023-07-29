@@ -53,9 +53,9 @@ const TypeOfFund = () => {
           <Link to="/" className="btn">
             Back
           </Link>
-          <button type="button" className="btn btn-glow">
+          <Link to='/admin-invest-in-country' type="button" className="btn btn-glow">
             NEXT
-          </button>
+          </Link>
         </div>
       </FlexContainer>
     </div>

@@ -8,7 +8,7 @@ const PreviousFundingRound = () => {
   const [show, setShow] = useState(false);
   return (
     <>
-      <StatusBar title="Previous Funding Round" link="/funding" />
+      <StatusBar title="Previous Funding Round" linkBack="/funding" />
       <div className="page__wrapper">
         <Container fluid className="px-5">
           <div className="page-title">Set up</div>

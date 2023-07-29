@@ -205,11 +205,6 @@ const SavedDetails = () => {
           </Col>
           <Col xs={12}>
             <div className={formStyle.borderedBox}>
-              <span className="text-grey">State</span>
-            </div>
-          </Col>
-          <Col xs={12}>
-            <div className={formStyle.borderedBox}>
               <span className="text-grey">City</span>
             </div>
           </Col>

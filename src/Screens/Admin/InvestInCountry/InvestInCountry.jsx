@@ -8,7 +8,7 @@ const InvestInCountry = () => {
     <div className="">
       <FlexContainer title="Hello" menus={false} homeButton={false}>
         <div className="mb-5 text-center">
-          <p className="fs-4">Country You Invest in?*</p>
+          <p className="fs-6">Country You Invest in?*</p>
           <span className="fs-sm">You can select multiple!</span>
         </div>
         <Row className="w-100">
@@ -102,9 +102,9 @@ const InvestInCountry = () => {
           <Link to="/" className="btn">
             Back
           </Link>
-          <button type="button" className="btn btn-glow">
+          <Link to='/admin-industry' type="button" className="btn btn-glow">
             NEXT
-          </button>
+          </Link>
         </div>
       </FlexContainer>
     </div>

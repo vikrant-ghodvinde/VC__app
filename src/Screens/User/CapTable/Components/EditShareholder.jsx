@@ -6,7 +6,7 @@ import formStyle from "Styles/FormControl.module.css";
 const EditShareholder = () => {
   return (
     <>
-      <StatusBar title="New Shareholder" link="/cap-table" />
+      <StatusBar title="New Shareholder" linkBack="/cap-table" />
       <div className="page__wrapper">
         <Container fluid className="px-5">
           <div className="page-title">Edit Shareholder</div>
@@ -96,10 +96,10 @@ const EditShareholder = () => {
                       <div className={formStyle.inputSelectField}>
                         <span>$</span>
                         <input type="number" name="" id="" />
-                        <select name="" id="">
+                      <select name="" id="">
                           <option value="USDT">USDT</option>
-                        </select>
-                      </div>
+                      </select>
+                    </div>
                     </div>
                   </Col>
                   <Col xs={12}>
