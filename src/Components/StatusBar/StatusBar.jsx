@@ -3,6 +3,7 @@ import Styles from "./StatusBar.module.css";
 import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
+import SortingDropdown from "./Components/SortingDropdown";
 
 const StatusBar = ({ title, linkBack, linkNext }) => {
   return (
@@ -11,6 +12,7 @@ const StatusBar = ({ title, linkBack, linkNext }) => {
         <div className={Styles.nav}>
           <div className={Styles.pageTitle}>{title}</div>
           <div className={Styles.links__wrapper}>
+            <SortingDropdown />
             {linkBack && (
               <div className={Styles.backButton}>
                 <Link to={linkBack}>

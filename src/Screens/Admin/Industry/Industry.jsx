@@ -1,99 +1,54 @@
+import ErrorModal from "Components/ErrorModal/ErrorModal";
 import FlexContainer from "Components/FlexContainer/FlexContainer";
-import React from "react";
+import industryOptions from "arrayFiles/industryList";
+import React, { useState } from "react";
 import { Col, Form, Row } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Industry = () => {
+    // State variable to store selected industries
+    const [selectedIndustries, setSelectedIndustries] = useState([]);
+    const [message, setmessage] = useState("")
+    const [show, setShow] = useState(false)
+    const navigate = useNavigate()
+    // Function to handle checkbox changes
+    const handleCheckboxChange = (event) => {
+      const { value, checked } = event.target;
+  
+      setSelectedIndustries((prevSelected) =>
+        checked ? [...prevSelected, value] : prevSelected.filter((industry) => industry !== value)
+      );
+    };
+
+    const handleNext = () =>{
+      if(selectedIndustries.length <= 0){
+        setmessage("select any industry for next")
+        setShow(true)
+        return
+      }
+      navigate('/admin')
+    }
   return (
     <div className="">
       <FlexContainer title="Hello" menus={false} homeButton={false}>
         <div className="mb-5 text-center">
           <p className="fs-6">Industry</p>
         </div>
-        <Row className="w-100">
+        <Row className="w-100 overflow-y-auto mb-5git">
           <Col md={12} lg={10} className="mx-auto">
             <Row className="gy-3">
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="FinTech" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="EdTech" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="Food Delivery" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
-              <Col md={6} lg={4}>
-                <Form.Check type="checkbox" id="" label="List item" />
-              </Col>
+            {industryOptions?.map((industry) => (
+                <Col md={6} lg={3} key={industry}>
+                  <Form.Check
+                    type="checkbox"
+                    id={industry}
+                    label={industry}
+                    value={industry}
+                    checked={selectedIndustries.includes(industry)}
+                    onChange={handleCheckboxChange}
+                  />
+                </Col>
+              ))}
             </Row>
           </Col>
         </Row>
@@ -101,11 +56,12 @@ const Industry = () => {
           <Link to="/" className="btn">
             Back
           </Link>
-          <Link to='/admin' type="button" className="btn btn-glow">
+          <button onClick={handleNext}  type="button" className="btn btn-glow">
             NEXT
-          </Link>
+          </button>
         </div>
       </FlexContainer>
+      <ErrorModal message={message} setShow={setShow} show={show}/>
     </div>
   );
 };

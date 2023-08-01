@@ -38,7 +38,7 @@ const CompanyInformation = () => {
             style={{ cursor: "pointer" }}
             onClick={() => setPageType("dataRoom")}
           >
-            Data Room
+            Summary
           </div>
         </div>
         <div className="page-content">

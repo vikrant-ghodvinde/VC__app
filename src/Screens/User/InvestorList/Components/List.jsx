@@ -4,6 +4,7 @@ import { Col, Form, Row, Table } from "react-bootstrap";
 import Paginations from "Components/Pagination/Paginations";
 import formStyle from "Styles/FormControl.module.css";
 import { Link } from "react-router-dom";
+import industryOptions from "arrayFiles/industryList";
 
 const List = () => {
   return (
@@ -15,6 +16,11 @@ const List = () => {
                 <label htmlFor="" className={formStyle.labelText}>Sector</label>
                 <select name="" id="">
                     <option value="">Sector</option>
+                    {
+                      industryOptions.map((item,index)=>{
+                        return <option value={item}>{item}</option>
+                      })
+                    }
                 </select>
             </div>
           </Col>
@@ -23,6 +29,13 @@ const List = () => {
                 <label htmlFor="" className={formStyle.labelText}>Stage</label>
                 <select name="" id="">
                     <option value="">Stage</option>
+                    <option value='seed'>Seed</option>
+                    <option value='pre-seed'>Pre Seed</option>
+                    <option value='growth'>Growth</option>
+                    <option value='angel'>Angel</option>
+                    <option value='series-a'>Series A</option>
+                    <option value='series-b'>Series B</option>
+                    <option value='pre-ipo'>Pre IPO</option>
                 </select>
             </div>
           </Col>
@@ -31,6 +44,10 @@ const List = () => {
                 <label htmlFor="" className={formStyle.labelText}>Type</label>
                 <select name="" id="">
                     <option value="">Type</option>
+                    <option value='vc'>VC</option>
+                    <option value='angel-syndicate'>Angel Syndicate</option>
+                    <option value='family-office'>Family Office</option>
+                    <option value='others'>Others</option>
                 </select>
             </div>
           </Col>
@@ -39,6 +56,12 @@ const List = () => {
                 <label htmlFor="" className={formStyle.labelText}>Country they Invest in</label>
                 <select name="" id="">
                     <option value="">Country</option>
+                    <option value='india'>India</option>
+                    <option value='usa'>USA</option>
+                    <option value='uk'>UK</option>
+                    <option value='singapore'>Singapore</option>
+                    <option value='new-zealand'>New Zealand</option>
+                    <option value='australia'>Australia</option>
                 </select>
             </div>
           </Col>

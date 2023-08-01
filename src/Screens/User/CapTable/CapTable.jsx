@@ -9,7 +9,7 @@ const CapTable = () => {
   return (
     <div className="page__wrapper">
       <Container fluid className="px-5">
-        <div className="page-title">Documents</div>
+        <div className="page-title">Cap Table</div>
         <div className="page-content">
           <div className={styles.tableOptions}>
             <Row>

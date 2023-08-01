@@ -26,6 +26,7 @@ import InvertorsNewFunding from "Screens/User/InvestorList/Screens/InvestorsNewF
 import InvertorsDocuments from "Screens/User/InvestorList/Screens/InvestorsDocuments";
 import InvertorsSummery from "Screens/User/InvestorList/Screens/InvestorsSummery";
 import StartUpLogin from "Screens/User/Login/StartUpLogin";
+import StageOfInvest from "Screens/Admin/StateofInvest/StageOfInvest";
 
 function App() {
   return (
@@ -40,6 +41,7 @@ function App() {
         <Route path="/admin-register" element={<CreateAccount />} />
         <Route path="/admin-fundtype" element={<TypeOfFund />} />
         <Route path="/admin-invest-in-country" element={<InvestInCountry />} />
+        <Route path='/admin-stage' element={<StageOfInvest/>}/>
         <Route path="/admin-industry" element={<Industry />} />
         <Route path="/admin" element={<Application />} />
         <Route path="/admin-company" element={<CompanyInformation />} />

@@ -10,12 +10,12 @@ const FundingTable = () => {
         <Row>
           <Col sm={12} md={12}>
             <div className="d-flex align-items-center justify-content-end gap-3 flex-wrap">
-              <Link to='/funding/previous-funding-round' className="btn btn-dark fs-sm px-3 py-2" >
+              <Link to='/investor-list' className="btn btn-dark fs-sm px-3 py-2" >
                 New Round
               </Link>
-              <button className="btn fs-sm px-3 py-2">
+              <Link to='/funding/previous-funding-round' className="btn fs-sm px-3 py-2">
                 Add Previous Round
-              </button>
+              </Link>
             </div>
           </Col>
         </Row>
