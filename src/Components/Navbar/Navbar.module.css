@@ -5,9 +5,11 @@
     background-color: #000;
     z-index: 999;
 }
-.hide{
+
+.hide {
     display: none;
 }
+
 .header nav {
     position: relative;
     width: 100%;
@@ -32,6 +34,7 @@
     text-decoration: none;
     color: rgba(255, 255, 255, 0.6);
 }
+
 .header nav .menus li a:hover,
 .header nav .menus li a.active {
     color: #fff;
@@ -119,4 +122,79 @@
     .header nav .menus li a.active::before {
         left: 8px;
     }
+}
+
+
+/* Notification Container */
+.notification__Wrapper {
+    position: relative;
+}
+
+.notification__Wrapper .notification__container {
+    position: absolute;
+    right: -50%;
+    transform: translateX(20%);
+    top: 38px;
+    width: 100%;
+    max-width: 300px;
+    min-width: 280px;
+    height: 360px;
+    padding: 16px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, .05);
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.notification__Wrapper .notification__container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.notification__Wrapper .notification__container .notifications__all {
+    position: relative;
+    height: 316px;
+    overflow-y: auto;
+}
+
+.notification__Wrapper .notification__container .headings {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.notification__Wrapper .notification__container .clearButton {
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.notification__Wrapper .notification__container .notification_item {
+    position: relative;
+    width: 100%;
+    cursor: default;
+}
+
+.notification__Wrapper .notification__container .notification_item .notification__Box {
+    position: relative;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(208, 213, 221, 1);
+    margin-bottom: 6px;
+}
+
+.notification__Wrapper .notification__container .notification_item .notification__options {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    flex-wrap: wrap;
 }

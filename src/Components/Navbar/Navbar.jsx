@@ -5,6 +5,7 @@ import styles from "./Navbar.module.css";
 import FeatherIcon from "feather-icons-react";
 import { useState } from "react";
 import {useSelector} from 'react-redux'
+import NotificationButton from "./Components/NotificationButton";
 const Navbar = () => {
   const [menuToggler, setMenuToggler] = useState(false);
   const location = useLocation();
@@ -118,12 +119,7 @@ const Navbar = () => {
           <div className={styles.options}>
             <ul className={styles.optionList}>
               <li>
-                <button className={styles.iconButton}>
-                  <FeatherIcon icon="bell" size={20} />
-                  <span class="position-absolute bg-danger rounded-circle alert-badge">
-                    1
-                  </span>
-                </button>
+                <NotificationButton />
               </li>
               <li>
                 {

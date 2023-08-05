@@ -98,6 +98,13 @@ a {
     box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
 }
 
+.btn-border {
+    padding: 6px 26px;
+    background: #fff !important;
+    color: #000 !important;
+    border-color: rgba(208, 213, 221, 1) !important;
+}
+
 .table__btn-cancel {
     padding: 2px 8px;
     border-radius: 16px;
@@ -454,6 +461,11 @@ table td {
     overflow-x: auto !important;
 }
 
+
+/* Cursors */
+.cursor-pointer {
+    cursor: pointer !important;
+}
 
 
 /*  */

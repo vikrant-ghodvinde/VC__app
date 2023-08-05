@@ -96,10 +96,10 @@ const EditShareholder = () => {
                       <div className={formStyle.inputSelectField}>
                         <span>$</span>
                         <input type="number" name="" id="" />
-                      <select name="" id="">
+                        <select name="" id="">
                           <option value="USDT">USDT</option>
-                      </select>
-                    </div>
+                        </select>
+                      </div>
                     </div>
                   </Col>
                   <Col xs={12}>
