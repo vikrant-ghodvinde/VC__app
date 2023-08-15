@@ -165,6 +165,9 @@ const InvertorsSummery = () => {
           </div>
         </Col>
       </Row>
+      <div className="footer_button-fix__without--width">
+        <button className="btn btn-gradient">APPLY</button>
+      </div>
     </>
   );
 };

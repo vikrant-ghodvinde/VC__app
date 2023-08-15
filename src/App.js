@@ -27,6 +27,7 @@ import InvertorsDocuments from "Screens/User/InvestorList/Screens/InvestorsDocum
 import InvertorsSummery from "Screens/User/InvestorList/Screens/InvestorsSummery";
 import StartUpLogin from "Screens/User/Login/StartUpLogin";
 import StageOfInvest from "Screens/Admin/StateofInvest/StageOfInvest";
+import Profile from "Screens/User/Setting/Profile";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="" element={<Login />} />
+        <Route path="user/setting" element={<Profile />} />
         <Route path="/register" element={<Register />} />
         <Route path="/select-country" element={<CountryOrCity />} />
         <Route path="/admin-login" element={<AdminLogin />} />
