@@ -28,6 +28,8 @@ import InvertorsSummery from "Screens/User/InvestorList/Screens/InvestorsSummery
 import StartUpLogin from "Screens/User/Login/StartUpLogin";
 import StageOfInvest from "Screens/Admin/StateofInvest/StageOfInvest";
 import Profile from "Screens/User/Setting/Profile";
+import ForgetPassword from "Screens/ForgetPassword/ForgetPassword/ForgetPassword";
+import ResetPassword from "Screens/ForgetPassword/ResetPassword/ResetPassword";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="" element={<Login />} />
+        <Route path="/forget" element={<ForgetPassword />} />
+        <Route path="/new-pass" element={<ResetPassword />} />
         <Route path="user/setting" element={<Profile />} />
         <Route path="/register" element={<Register />} />
         <Route path="/select-country" element={<CountryOrCity />} />

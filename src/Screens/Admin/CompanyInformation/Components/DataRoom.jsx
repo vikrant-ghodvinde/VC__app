@@ -48,6 +48,19 @@ const DataRoom = () => {
           </Col>
         </Row>
       </Col>
+      <Col md={12} lg={6}>
+        <div className={formStyle.formGroup}>
+          <div className="d-flex align-items-center justify-content-between mb-2">
+            <label htmlFor="">
+              Comments
+            </label>
+            <span className="text-decoration-underline cursor-pointer">
+              Change
+            </span>
+          </div>
+          <textarea name="" id=""></textarea>
+        </div>
+      </Col>
       <Col md={12} lg={12}>
         <Row>
           <Col md={12} lg={6}>

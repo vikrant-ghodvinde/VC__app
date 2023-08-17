@@ -1,4 +1,3 @@
-import FeatherIcon from "feather-icons-react/build/FeatherIcon";
 import React from "react";
 import { Col, Modal, Row } from "react-bootstrap";
 import formStyle from "Styles/FormControl.module.css";
